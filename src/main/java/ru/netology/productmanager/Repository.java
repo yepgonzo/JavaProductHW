@@ -25,7 +25,7 @@ public class Repository {
 
     public void remove(int id) {
         if (findById(id) == null) {
-            throw new IdNotFound("Запрашиваемый Id не найден: " + id);
+            throw new NotFoundException("Запрашиваемый Id не найден: " + id);
         }
         Product[] tmp = new Product[products.length - 1];
         int copyToIndex = 0;

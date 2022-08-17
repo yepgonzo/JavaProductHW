@@ -104,7 +104,7 @@ public class ProductManagerTest {
         repository.add(smartphone2);
         repository.add(smartphone3);
 
-        assertThrows(IdNotFound.class, () -> {
+        assertThrows(NotFoundException.class, () -> {
             repository.remove(945);
         });
     }
